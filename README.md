@@ -1,2 +1,2 @@
 # stop_words
-Compendium of English stop words from several sources
+Compendium of English stop words from various sources
