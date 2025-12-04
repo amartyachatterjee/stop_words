@@ -1,18 +1,22 @@
+from pathlib import Path
+
 import contractions
 import spacy
 from gensim.parsing.preprocessing import STOPWORDS
 from wordcloud import STOPWORDS as wordcloud_STOPWORDS
+import nltk
 
 class CustomStopWords:
     def __init__(self,
-                 nltk_data_path: str|None=None,
+                 nltk_data_path: str|Path|None=None,
                  domain_specific_stops: list[str]|None=None):
         self.nlp = spacy.load('en_core_web_lg',disable=['parser','ner'])
 
         self.nltk_data_path = nltk_data_path
 
-        import nltk
         if self.nltk_data_path is not None:
+            if isinstance(self.nltk_data_path, str):
+                self.nltk_data_path = Path(self.nltk_data_path)
             nltk.data.path.append(self.nltk_data_path)
         from nltk.corpus import stopwords, words
 
