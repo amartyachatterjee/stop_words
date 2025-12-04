@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='stop_words',
-    version='0.1.0',
+    version='0.1.1',
     description='A collection of data structures to remove stop words, including domain-specific stopwords',
     # long_description=open('README.md').read(),
     author='Amartya Chatterjee',

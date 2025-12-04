@@ -3,17 +3,18 @@ import spacy
 from gensim.parsing.preprocessing import STOPWORDS
 from wordcloud import STOPWORDS as wordcloud_STOPWORDS
 
-from util.utilities import Utilities
-util = Utilities()
-
-import nltk
-nltk.data.path.append(util.nltk_data_path)
-from nltk.corpus import stopwords, words
-
 class CustomStopWords:
     def __init__(self,
+                 nltk_data_path: str|None=None,
                  domain_specific_stops: list[str]|None=None):
         self.nlp = spacy.load('en_core_web_lg',disable=['parser','ner'])
+
+        self.nltk_data_path = nltk_data_path
+
+        import nltk
+        if self.nltk_data_path is not None:
+            nltk.data.path.append(self.nltk_data_path)
+        from nltk.corpus import stopwords, words
 
         english_custom_stops = list(
             {
