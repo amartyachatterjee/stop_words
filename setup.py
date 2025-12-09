@@ -5,7 +5,7 @@ setup(
     name='stop_words',
     version='0.1.0',
     description='A collection of data structures to remove stop words, including domain-specific stopwords.',
-    # long_description=open('README.md').read(),
+    long_description=open('README.md').read(),
     author='Amartya Chatterjee',
     author_email='amartya.chatterjee@gmail.com',
     license='MIT',
