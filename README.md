@@ -4,6 +4,9 @@ A compendium of assorted English stop words collected from several different sou
 ## **Installation**
 ```
 pip install git+https://github.com/amartyachatterjee/stop_words.git
+
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl
 ```
 
 ## **Usage**
